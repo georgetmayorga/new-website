@@ -8,6 +8,7 @@
 *, html {
   padding: 0;
   margin: 0;
+  font-family: monospace;
 }
 
 iframe {
@@ -21,11 +22,15 @@ iframe {
 
 #output-container {
   overflow: hidden;
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   zoom: 1;
   margin: 0 auto;
+}
+
+#output-container.clicked {
+  right: -5000px;
 }
 
 #cli {
@@ -110,4 +115,23 @@ iframe {
   50% {
     color: black;
   }
+}
+
+.input-area {
+  display: none;
+  padding: 15px;
+  opacity: .6;
+}
+
+.input-area>input {
+  padding: 10px;
+}
+
+input, textarea, select{font-family:monospace;}
+
+.secret-text {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200px;
 }
