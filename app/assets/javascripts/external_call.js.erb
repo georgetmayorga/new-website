@@ -1,10 +1,15 @@
 function GoGoGadget() {
-  var jsonpText = "";
-  jsonpText += "$.getJSON('http://anyorigin.com/dev/get?url=facebook.com&callback=?', function(data){\n";
-  jsonpText += "	$('#output').html(data.contents);\n";
-  jsonpText += "});";
-  $("#jsonp").text(jsonpText);
-  $.getJSON("http://anyorigin.com/dev/get?url=facebook.com&callback=?", function(data) {
+  var randomNumber = Math.random();
+  if (randomNumber > .75) {
+    var websiteURL = "facebook.com";
+  } else if (randomNumber > .5) {
+    var websiteURL = "wikipedia.org";
+  } else if (randomNumber > .25) {
+    var websiteURL = "myspace.com";
+  } else {
+    var websiteURL = "alibaba.com";
+  };
+  $.getJSON("http://anyorigin.com/dev/get?url="+escape(websiteURL)+"&callback=?", function(data) {
     // This iframe sillyness is to put the html into a css sandbox (so it doesn't affect the main website)
     var iframe = $("#output")[0];//.html(data.contents);
     var doc = iframe.document;
@@ -19,5 +24,6 @@ function GoGoGadget() {
   });
 
   return false;
-}
+};
 
+GoGoGadget();
