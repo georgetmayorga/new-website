@@ -27,3 +27,87 @@ iframe {
   zoom: 1;
   margin: 0 auto;
 }
+
+#cli {
+  height: 50px;
+  width: 400px;
+  position: absolute;
+  top: 400px;
+  right: 0;
+}
+
+#typed-cursor>a {
+  font-weight: 300;
+  font-size: 30px;
+  color: lightgray;
+  opacity: .3;
+  margin-left: 30px;
+}
+
+.slogan {
+  color: #2E3D48;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  margin: -60px 0 0 0;
+  display: block;
+  width: 100%;
+}
+
+#typed-cursor.blinking>a {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from,to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+
+}
+
+@-moz-keyframes blink {
+  from,to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+
+}
+
+@-webkit-keyframes "blink" {
+  from,to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+
+}
+
+@-ms-keyframes "blink" {
+  from,to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+
+}
+
+@-o-keyframes "blink" {
+  from,to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
