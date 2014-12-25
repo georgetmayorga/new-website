@@ -1,0 +1,23 @@
+function GoGoGadget() {
+  var jsonpText = "";
+  jsonpText += "$.getJSON('http://anyorigin.com/dev/get?url=facebook.com&callback=?', function(data){\n";
+  jsonpText += "	$('#output').html(data.contents);\n";
+  jsonpText += "});";
+  $("#jsonp").text(jsonpText);
+  $.getJSON("http://anyorigin.com/dev/get?url=facebook.com&callback=?", function(data) {
+    // This iframe sillyness is to put the html into a css sandbox (so it doesn't affect the main website)
+    var iframe = $("#output")[0];//.html(data.contents);
+    var doc = iframe.document;
+    if(iframe.contentDocument) {
+      doc = iframe.contentDocument;
+    } else if(iframe.contentWindow) {
+      doc = iframe.contentWindow.document;
+    }
+    doc.open();
+    doc.writeln(data.contents);
+    doc.close();
+  });
+
+  return false;
+}
+
