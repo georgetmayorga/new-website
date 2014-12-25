@@ -5,11 +5,11 @@ function GoGoGadget() {
   } else if (randomNumber > .5) {
     var websiteURL = "wikipedia.org";
   } else if (randomNumber > .25) {
-    var websiteURL = "myspace.com";
+    var websiteURL = "amazon.com";
   } else {
     var websiteURL = "alibaba.com";
   };
-  $.getJSON("http://anyorigin.com/dev/get?url="+escape(websiteURL)+"&callback=?", function(data) {
+  $.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
     // This iframe sillyness is to put the html into a css sandbox (so it doesn't affect the main website)
     var iframe = $("#output")[0];//.html(data.contents);
     var doc = iframe.document;
