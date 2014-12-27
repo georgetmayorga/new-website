@@ -1,7 +1,6 @@
-$('#show-passkey').click(function (event) {
-  this.setAttribute("style", "display: none;");
+function showPasskey() {
   $('.input-area')[0].setAttribute("style", "display: inline-block;");
-});
+};
 
 $('#passkey').keydown(function(event) {
   if ( event.which == 13 ) {

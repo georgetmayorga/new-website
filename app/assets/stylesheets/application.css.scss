@@ -11,6 +11,10 @@
   font-family: monospace;
 }
 
+.lobby {
+  @include outer-container;
+}
+
 iframe {
   border: none;
 }
@@ -21,23 +25,28 @@ iframe {
 }
 
 #output-container {
-  overflow: hidden;
   position: absolute;
   width: 100vw;
   height: 100vh;
   zoom: 1;
   margin: 0 auto;
+  z-index: -1;
 }
 
 #output-container.clicked {
   right: -5000px;
 }
 
+area {
+  outline: none;
+}
+
 #cli {
-  height: 50px;
-  width: 400px;
+  height: 24px;
+  width: 31px;
   position: absolute;
-  top: 400px;
+  top: 34%;
+  margin-right: 52%;
   right: 0;
 }
 
@@ -118,13 +127,28 @@ iframe {
 }
 
 .input-area {
+  background: black;
+  opacity: .9;
+  @include span-columns(4);
+  @include shift(4);
   display: none;
-  padding: 15px;
-  opacity: .6;
 }
 
 .input-area>input {
   padding: 10px;
+  margin-top: 40%;
+  border: none;
+  background: black;
+  color: white;
+  display: inline-block;
+  outline: none;
+}
+
+.input-area>p {
+  margin-top: 84%;
+  display: inline-block;
+  color: white;
+  margin-left: 10px;
 }
 
 input, textarea, select{font-family:monospace;}
@@ -134,4 +158,8 @@ input, textarea, select{font-family:monospace;}
   margin: 0 auto;
   text-align: center;
   margin-top: 200px;
+}
+
+#fake-logo {
+  margin: 75px;
 }
