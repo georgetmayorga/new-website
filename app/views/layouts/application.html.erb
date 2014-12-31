@@ -7,6 +7,9 @@
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
+  <script>
+    window.PASSKEY = "<%= @passkey %>"
+  </script>
 </head>
 <body class="<%= body_class %>">
   <%= render "flashes" -%>

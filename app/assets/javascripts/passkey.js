@@ -4,7 +4,7 @@ function showPasskey() {
 
 $('#passkey').keydown(function(event) {
   if ( event.which == 13 ) {
-    if ( event.target.value === "password") {
+    if ( event.target.value === window.PASSKEY ) {
       $('#output-container').fadeOut(2000);
       $(this).fadeOut(2000);
       openSesame();
