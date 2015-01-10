@@ -1,0 +1,34 @@
+body.posts-index {
+  background: lightgray;
+  margin: 25px;
+  @include span-columns(8);
+  @include shift(2);
+}
+
+.posts-container {
+  background: lightgray;
+}
+
+.post {
+  padding: 25px 0;
+}
+
+.name {
+  @include span-columns(2);
+}
+
+.last-modified {
+  @include span-columns(2);
+  @include shift(2);
+}
+
+.size {
+  @include span-columns(2);
+  @include shift(2);
+}
+
+a, a:visited {
+  // border-bottom: 1px solid #cbeefa;
+  box-shadow: inset 0 -5px 0 #CBFAD8;
+  color: inherit;
+}

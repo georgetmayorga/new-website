@@ -5,9 +5,7 @@ function showPasskey() {
 $('#passkey').keydown(function(event) {
   if ( event.which == 13 ) {
     if ( event.target.value === window.PASSKEY ) {
-      $('#output-container').fadeOut(2000);
-      $(this).fadeOut(2000);
-      openSesame();
+      window.location = "/posts"
     } else {
       event.target.value = "";
       $('.input-area')[0].setAttribute("style", "display: none;");
@@ -15,10 +13,3 @@ $('#passkey').keydown(function(event) {
   };
  }
 });
-
-function openSesame() {
-  $('body.lobby.lobby-show')[0].setAttribute("style", "background-color:black; width: 100vw; height: 100vh;");
-  $('body').html(
-    "<div class='secret-text'>This should be some words</div>"
-  );
-};
