@@ -1,8 +1,8 @@
 body.posts-index {
   background: lightgray;
-  margin: 25px;
-  @include span-columns(8);
-  @include shift(2);
+  @include span-columns(9);
+  @include shift(1.5);
+  margin-top: 25px;
 }
 
 .posts-container {
@@ -14,17 +14,16 @@ body.posts-index {
 }
 
 .name {
-  @include span-columns(2);
+  @include span-columns(3);
 }
 
 .last-modified {
-  @include span-columns(2);
-  @include shift(2);
+  @include span-columns(3);
 }
 
 .size {
-  @include span-columns(2);
-  @include shift(2);
+  @include span-columns(3);
+  @include omega();
 }
 
 a, a:visited {
