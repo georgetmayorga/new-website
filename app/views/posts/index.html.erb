@@ -1,42 +1,20 @@
 <div class="post-heading">
-<h1>Index of /</h2>
-<div class="name">
-  <a href="#">Name</a>
+  <h1>Index of /</h2>
+  <div class="name">
+    Name
+  </div>
+
+  <div class="last-modified">
+    Last Modified
+  </div>
+
+  <div class="size">
+    Size
+  </div>
+
+  <hr>
 </div>
-<div class="last-modified">
-  <a href="#">Last Modified</a>
-</div>
-<div class="size">
-  <a href="#">Size</a>
-</div>
-<hr>
-</div>
+
 <div class="posts-container">
-  <div class="post">
-    <div class="name">
-      <%= link_to "Hello World", "#" %>
-    </div>
-
-    <div class="last-modified">
-      2015-01-10
-    </div>
-
-    <div class="size">
-      0 kb
-    </div>
-  </div>
-  <div class="post">
-    <div class="name">
-      <%= link_to "Goodbye World", "#" %>
-    </div>
-
-    <div class="last-modified">
-      2015-01-10
-    </div>
-
-    <div class="size">
-      0 kb
-    </div>
-  </div>
-
+  <%= render @posts %>
 </div>

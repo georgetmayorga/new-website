@@ -1,0 +1,13 @@
+<div class="post">
+  <div class="name">
+    <%= link_to post.title, post_path(post) %>
+  </div>
+
+  <div class="last-modified">
+    <%= post.last_modified %>
+  </div>
+
+  <div class="size">
+    <%= rand(24) %> kb
+  </div>
+</div>

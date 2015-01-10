@@ -1,0 +1,19 @@
+<div>
+  <%= link_to '&#9650;'.html_safe + ' Parent Directory', posts_path %>
+</div>
+<hr>
+
+<div class="post-title">
+  <h1><%= @post.title %></h1>
+</div>
+
+<div class="post-body">
+  <p><%= markdown(@post.body) %></p>
+</div>
+
+<hr>
+
+<div>
+  Created at: <%= @post.created_at %><br>
+  Last modified: <%= @post.last_modified %>
+</div>
