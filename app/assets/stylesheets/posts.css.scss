@@ -3,6 +3,7 @@ body {
   @include span-columns(9);
   @include shift(1.5);
   margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .posts-container {
@@ -37,5 +38,5 @@ a, a:visited, a:hover {
 }
 
 .post-destroy {
-  display: inline-block;
+  margin-top: 10px;
 }

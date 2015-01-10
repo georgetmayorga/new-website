@@ -1,2 +1,6 @@
 <h1>Edit '<%= @post.title %>'</h1>
 <%= render "form", post: @post %>
+
+<div class="post-destroy">
+  <%= button_to 'Destroy', @post, method: :delete %>
+</div>
