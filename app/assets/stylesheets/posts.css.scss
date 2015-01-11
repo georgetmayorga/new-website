@@ -40,3 +40,12 @@ a, a:visited, a:hover {
 .post-destroy {
   margin-top: 10px;
 }
+
+a.anchor {
+  position: absolute;
+  left: 105px;
+  margin-top: 3px;
+  font: 1em verdana, sans-serif;
+  text-decoration: none;
+  box-shadow: none;
+}
