@@ -8,12 +8,11 @@
 </div>
 
 <div class="post-body">
-  <p><%= markdown(@post.body) %></p>
+  <%= markdown(@post.body) %>
 </div>
 
-<hr>
-
-<div>
+<div class="post-footer">
+  <hr>
   Created at: <%= @post.created_at %><br>
   Last modified: <%= @post.last_modified %>
 </div>
