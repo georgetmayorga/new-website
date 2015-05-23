@@ -37,6 +37,7 @@ iframe {
   zoom: 1;
   margin: 0 auto;
   z-index: -1;
+  display: none;
 }
 
 #output-container.clicked {
@@ -48,6 +49,7 @@ area {
 }
 
 .content-container {
+  display: none;
   position: absolute;
   top: 0;
   width: 650px;
@@ -145,3 +147,7 @@ a:hover {
     color: black;
   }
 } 
+
+.loading {
+  text-align: center;
+}

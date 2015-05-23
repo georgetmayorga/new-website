@@ -9,20 +9,26 @@ function GoGoGadget() {
   } else {
     var websiteURL = "espn.go.com";
   }
-$.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
-  var iframe = $("#output")[0];//.html(data.contents);
-  var doc = iframe.document;
-  if(iframe.contentDocument) {
-    doc = iframe.contentDocument;
-  } else if(iframe.contentWindow) {
-    doc = iframe.contentWindow.document;
-  }
-  doc.open();
-  doc.writeln(data.contents);
-  doc.close();
-});
+  $.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
+    var iframe = $("#output")[0];//.html(data.contents);
+    var doc = iframe.document;
+    if(iframe.contentDocument) {
+      doc = iframe.contentDocument;
+    } else if(iframe.contentWindow) {
+      doc = iframe.contentWindow.document;
+    }
+    doc.open();
+    doc.writeln(data.contents);
+    doc.close();
+  });
 
-return false;
+  return false;
 };
+
+$("iframe").load(function() {
+  $(".content-container").attr("style", "display: block;");
+  $("#output-container").attr("style", "display: block;");
+  $(".loading").fadeOut("500");
+});
 
 GoGoGadget();
