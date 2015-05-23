@@ -1,8 +1,42 @@
 <div id="output-container">
-  <iframe id="output"></iframe>
+<iframe id="output"></iframe>
 </div>
 
-<div class="input-area">
-  <p id="dollar-sign">$</p>
-  <input id="passkey" placeholder="enter passkey"/>
+<div class="content-container">
+  <div class="name">
+    <p class="mobile-warning">Open this at a larger size for the intended viewing experience.</p>
+    George Mayorga
+  </div>
+
+  <div class="description">
+    <div class="content">
+      <p>I work as a software developer.</p>
+      <p>Right now I'm building things in Meteor and Rails.</p>
+    </div>
+
+    <div class="links">
+      <p><%= link_to "email", "mailto:georgetmayorga@gmail.com" %></p>
+      <p><%= link_to "twitter", "http://twitter.com/grgmyrg" %></p>
+      <p><%= link_to "linkedin", "https://www.linkedin.com/in/gmayorga" %></p>
+      <!-- <p><%= link_to "resume", "#" %></p> -->
+    </div>
+  </div>
+
+  <div class="projects-header">
+    open-source projects
+  </div>
+
+  <div class="projects">
+    <p><a href="http://pkg.cat" target=_blank>PKG.CAT</a></p>
+    <p class="date">2014</p>
+    <img src="https://raw.githubusercontent.com/georgetmayorga/pkg-cat/master/app/assets/images/landing-page.png" width="450">
+    <p>Sharing an email address shares all the things you want. No more giving bit.ly or slideshare links after a talk. Your presentation in your audiences inbox forever.</p>
+    <hr>
+    <p>
+    <a href="https://twitter.com/grgmyrg" target=_blank>George-Bot</a>
+    </p>
+    <p class="date">2014</p>
+    <img src="https://raw.githubusercontent.com/georgetmayorga/twitter-bot/master/app/assets/images/twitter.png" width="450">
+    <p>I use twitter to find a lot of information and follow some great accounts, but never used it to tweet. I was also interested in learning the Twitter API. With that in mind, I built a twitter-bot that retweets accounts I follow every hour on the :40. Here's the <a href="https://github.com/georgetmayorga/twitter-bot/blob/master/lib/tasks/retweet.rake#L1-L4" target=_blank>simple rake task</a> that gets it done.</p>
+  </div>
 </div>

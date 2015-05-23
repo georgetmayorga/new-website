@@ -1,15 +1,10 @@
 function GoGoGadget() {
   var randomNumber = Math.random();
-  var websiteURL = "wikipedia.org";
-  // if (randomNumber > .75) {
-  //   var websiteURL = "facebook.com";
-  // } else if (randomNumber > .5) {
-  //   var websiteURL = "wikipedia.org";
-  // } else if (randomNumber > .25) {
-  //   var websiteURL = "amazon.com";
-  // } else {
-  //   var websiteURL = "alibaba.com";
-  // };
+  if (randomNumber > .5) {
+    var websiteURL = "wikipedia.org";
+  } else {
+    var websiteURL = "producthunt.com";
+  };
   $.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
     // This iframe sillyness is to put the html into a css sandbox (so it doesn't affect the main website)
     var iframe = $("#output")[0];//.html(data.contents);
@@ -22,7 +17,6 @@ function GoGoGadget() {
     doc.open();
     doc.writeln(data.contents);
     doc.close();
-    replaceLogo();
   });
 
   return false;

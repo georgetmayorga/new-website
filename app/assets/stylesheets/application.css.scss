@@ -4,12 +4,16 @@
 @import 'base/grid-settings';
 @import 'neat';
 @import 'base/base';
-@import 'posts';
 
 *, html {
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 26px;
+  background: #fff;
 }
 
 .lobby {
@@ -43,127 +47,101 @@ area {
   outline: none;
 }
 
-#cli {
-  height: 24px;
-  width: 31px;
+.content-container {
   position: absolute;
-  top: 34%;
-  margin-right: 52%;
+  top: 0;
+  width: 650px;
+  left: 0;
   right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background: none;
+  max-height: 100vh;
+  overflow: auto;
 }
 
-#typed-cursor>a {
-  font-weight: 300;
-  font-size: 30px;
-  color: lightgray;
-  opacity: .3;
-  margin-left: 30px;
+.name, .projects, .projects-header, .description {
+  color: #222;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 50px 0;
 }
 
-.slogan {
-  color: #2E3D48;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  margin: -60px 0 0 0;
-  display: block;
-  width: 100%;
+.projects-header {
+  background: none;
+  font-size: 24px;
+  color: black;
+  margin: 0;
 }
 
-#typed-cursor.blinking>a {
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+.name {
+  background: #222;
+  color: white;
+  margin: 0;
 }
 
-@keyframes "blink" {
-  from,to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-
+.projects {
+  margin-top: 25px;
 }
 
-@-moz-keyframes blink {
-  from,to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+.description {
+  overflow: auto;
 
-}
-
-@-webkit-keyframes "blink" {
-  from,to {
-    color: transparent;
+  .content {
+    width: 60%;
+    float: left;
   }
-  50% {
-    color: black;
-  }
-
-}
-
-@-ms-keyframes "blink" {
-  from,to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-
-}
-
-@-o-keyframes "blink" {
-  from,to {
-    color: transparent;
-  }
-  50% {
-    color: black;
+  .links {
+    width: 30%;
+    margin-left: 3%;
+    float: left;
+    p {
+      margin: 0;
+    }
   }
 }
 
-.input-area {
-  background: black;
-  opacity: .9;
-  @include span-columns(4);
-  @include shift(4);
+a, a:visited {
+  box-shadow: inset 0 -5px 0 #ddd;
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Times', serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.5px;
+}
+
+a:hover {
+  color: #666;
+}
+
+.date {
+  margin-top: -23px;
+  margin-left: 58px;
+  font-size: 13px;
+  color: blue;
+}
+
+.mobile-warning {
   display: none;
-  margin-top: 22%;
 }
 
-.input-area>input {
-  padding: 10px;
-  // margin-top: 40%;
-  border: none;
-  background: black;
-  color: white;
-  display: inline-block;
-  outline: none;
-  width: 90%;
-}
+@media only screen and (max-width: 768px) {
+  .content-container {
+    width: 100%;
+  }
 
-.input-area>p {
-  // margin-top: 84%;
-  display: inline-block;
-  color: white;
-  margin-left: 10px;
-}
+  #output-container {
+    pointer-events: none;
+    max-height: 100vh;
+    overflow: hidden;
+  }
 
-input, textarea, select{font-family:monospace;}
-
-.secret-text {
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 200px;
-}
-
-#fake-logo {
-  margin: 75px;
-}
+  .mobile-warning {
+    display: block;
+    background: yellow;
+    padding: 7px;
+    color: black;
+  }
+} 
