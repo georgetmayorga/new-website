@@ -1,25 +1,28 @@
 function GoGoGadget() {
   var randomNumber = Math.random();
-  if (randomNumber > .5) {
-    var websiteURL = "wikipedia.org";
+  if (randomNumber < .25) {
+    var websiteURL = "amazon.com";
+  } else if (randomNumber < .5) {
+    var websiteURL = "buzzfeed.com";
+  } else if (randomNumber < .75) {
+    var websiteURL = "netflix.com";
   } else {
-    var websiteURL = "producthunt.com";
-  };
-  $.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
-    // This iframe sillyness is to put the html into a css sandbox (so it doesn't affect the main website)
-    var iframe = $("#output")[0];//.html(data.contents);
-    var doc = iframe.document;
-    if(iframe.contentDocument) {
-      doc = iframe.contentDocument;
-    } else if(iframe.contentWindow) {
-      doc = iframe.contentWindow.document;
-    }
-    doc.open();
-    doc.writeln(data.contents);
-    doc.close();
-  });
+    var websiteURL = "espn.go.com";
+  }
+$.getJSON("http://whateverorigin.org/get?url=http://"+escape(websiteURL)+"&callback=?", function(data) {
+  var iframe = $("#output")[0];//.html(data.contents);
+  var doc = iframe.document;
+  if(iframe.contentDocument) {
+    doc = iframe.contentDocument;
+  } else if(iframe.contentWindow) {
+    doc = iframe.contentWindow.document;
+  }
+  doc.open();
+  doc.writeln(data.contents);
+  doc.close();
+});
 
-  return false;
+return false;
 };
 
 GoGoGadget();
